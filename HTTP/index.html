@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Data Mining Tool</h2>
+  <p>A Intelligent and Mobile Interview System for HKUCS(IMI)</p>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active" ID="tab1"><a href="#">View data</a></li>
+    <li ID="tab2"><a href="#"> Supervised Modeling</a></li>
+    <li ID="tab3"> <a href="#">View Statistics</a></li>
+  </ul>
+</div>
+<div ID="ViewData">
+    <div ID="yearList"><a ID="2016" onclick="loadData(2016)" style="margin:20px 20px 20px 20px; width: 200px; height:40px;">2016</a></div>
+    <div ID="explanation" style="margin:20px 20px 20px 20px; width: 1000px; height:40px;"></div>
+    <table ID="data">
+
+    </table>
+</div>
+<div ID="Modelling">
+    <div ID="modellingAttributeList" style="margin:20px 20px 20px 20px; width: 200px; height:80px;">
+        <table>
+
+        </table>
+    </div>
+    <p ID="sampleSize" style="margin:20px 20px 20px 20px; width: 900px; height:30px;"></p>
+    <div ID="target" style="margin:20px 20px 20px 20px; width: 500px; height:60px;">
+        <p>please select target variable here</p>
+        <select id="targets" onchange="loadModelList()">
+        </select>
+    </div>
+    <div ID="modelList" style="margin:20px 20px 20px 20px; width: 500px; height:60px;">
+        <p>please select model here</p>
+        <select id="models">
+        </select>
+    </div>
+    <button onclick="trainModel()" style="margin:20px 20px 20px 20px; width: 70px; height:20px;">START</button>
+    <div ID="result" style="margin:20px 20px 20px 20px; width: 900px;">
+        <div ID="variableExplanation" style="margin:20px 20px 20px 20px; width: 900px;">
+
+        </div>
+        <div ID="textResult" style="margin:20px 20px 20px 20px; width: 900px;"></div>
+        <div ID="graphResult" style="margin:20px 20px 20px 20px; width: 900px;"></div>
+    </div>
+</div>
+<div ID="ViewStatistics">
+
+</div>
+</body>
+</html>
